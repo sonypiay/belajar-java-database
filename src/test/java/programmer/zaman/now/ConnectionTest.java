@@ -32,6 +32,7 @@ public class ConnectionTest {
 
             Connection connection = DriverManager.getConnection(url, username, password);
             System.out.println("Connection success");
+            connection.close();
         } catch( SQLException exception) {
             Assertions.fail(exception);
         }
